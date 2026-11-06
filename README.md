@@ -1,40 +1,62 @@
-### Library Management
+# Library Management System
 
-Library Management System
+## Project Overview
+The Library Management System is a web-based application developed using the Frappe Framework. It helps manage library books, members, memberships, and book issue and return transactions.
 
-### Installation
+## Features
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+- **Article Management:** Add and manage books with details such as title, author, ISBN, publisher, and availability status.
+- **Library Member Management:** Store and manage member information.
+- **Membership Management:** Create and manage library memberships with validity dates and payment status.
+- **Book Transactions:** Handle book issuing and returning.
+- **Library Settings:** Configure loan periods and maximum number of books a member can borrow.
+- **Validation:** Apply rules for membership validity, book availability, and borrowing limits.
+- **Website Portal:** Display published books and their details.
+
+## Technologies Used
+
+- Python
+- Frappe Framework
+- JavaScript
+- MariaDB
+- HTML
+- CSS
+- Git and GitHub
+
+## Main Modules
+
+1. Article
+2. Library Member
+3. Library Membership
+4. Library Settings
+5. Library Transaction
+
+## Installation and Setup
+
+1. Set up Frappe Bench in your system.
+2. Open the terminal and navigate to your bench directory.
+3. Get the application:
 
 ```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch version-16
-bench install-app library_management
+bench get-app --branch version-16 https://github.com/rithumary/Frappe-Library-Management.git
 ```
 
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+4. Install the application on your site:
 
 ```bash
-cd apps/library_management
-pre-commit install
+bench --site your-site-name install-app library_management
 ```
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+5. Start the bench:
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
-### CI
+```bash
+bench start
+```
 
-This app can use GitHub Actions for CI. The following workflows are configured:
+## Repository
 
-- CI: Installs this app and runs unit tests on every push to `develop` branch.
-- Linters: Runs [Frappe Semgrep Rules](https://github.com/frappe/semgrep-rules) and [pip-audit](https://pypi.org/project/pip-audit/) on every pull request.
+GitHub: https://github.com/rithumary/Frappe-Library-Management
 
+## Author
 
-### License
-
-mit
+Rithu Mary Varghese
